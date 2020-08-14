@@ -21,8 +21,8 @@
 			<url>http://localhost:8081/nexus/content/repositories/ARTECH/</url>
 		</repository>
 		<snapshotRepository>
-			<id>VRTECH</id>
-			<url>http://localhost:8081/nexus/content/repositories/VRTECH/</url>
+			<id>LRTECH</id>
+			<url>http://localhost:8081/nexus/content/repositories/LRTECH/</url>
 		</snapshotRepository>		
   </distributionManagement>
 </project>
