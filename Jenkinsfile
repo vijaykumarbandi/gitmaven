@@ -3,7 +3,7 @@ agent any
 stages {
 stage('compile stage') {
 steps {
-withMaven(maven : 'M2_Home') {
+withEnv(maven : 'M2_Home') {
 sh 'mvn complie'
 }
 }
