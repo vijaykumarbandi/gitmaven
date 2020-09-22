@@ -17,11 +17,11 @@
   <distributionManagement>
 
 		<repository>
-			<id>Maven-release</id>
+			<id>latha</id>
 			<url>http://192.168.33.10:8081/repository/latha/</url>
 		</repository>
 		<snapshotRepository>
-			<id>Maven-snapshot</id>
+			<id>vijay</id>
 			<url>http://192.168.33.10:8081/repository/vijay/</url>
 		</snapshotRepository>		
   </distributionManagement>
