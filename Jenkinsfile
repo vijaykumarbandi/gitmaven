@@ -1,4 +1,4 @@
-agent {
+node {
 def mvn = tool (maven : 'M2-HOME',type:'maven')+'/bin/mvn'
 stage('git checkout') {
 git 'https://github.com/vijaykumarbandi/gitmaven.git'
