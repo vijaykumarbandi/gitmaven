@@ -1,8 +1,5 @@
 agent {
-def mvn = tool (maven : 'M2-HOME',type:'maven') +'\bin\mvn'
-stage('git checkout') {
-git 'https://github.com/vijaykumarbandi/gitmaven.git'
-}
+def mvn = tool (maven : 'M2-HOME',type:'maven')+'\bin\mvn'
 stage('compile stage') {
 sh "${mvn} clean compile"
 }
