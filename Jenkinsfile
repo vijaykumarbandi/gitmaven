@@ -1,37 +1,12 @@
-pipeline {
-    agent any
-    stages {
-        stage('One') {
-                steps {
-                        echo 'Hi, this is Zulaikha from edureka'
-			
-                }
-        }
-	    stage('Two'){
-		    
-		steps {
-			input('Do you want to proceed?')
-        }
-	    }
-        stage('Three') {
-                when {
-                        not {
-                                branch "master"
-                        }
-                }
-                steps {
-			echo "Hello"
-                        }
-        }
-        stage('Four') {
-                parallel {
-                        stage('Unit Test') {
-                                steps{
-                                        echo "Running the unit test..."
-                                }
-                        }
-                }
-        }
-    }
+agent {
+def mvn = tool (maven : 'M2-HOME',type: 'maven')+'\bin\mvn'
+stage('git checkout') {
+git 'https://github.com/vijaykumarbandi/gitmaven.git'
 }
-
+stage('compile stage') {
+sh "${mvn} clean compile"
+}
+stage('package stage') {
+sh "${mvn} package"
+}
+}
